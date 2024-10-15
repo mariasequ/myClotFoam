@@ -1,0 +1,102 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2312                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      p;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -2 0 0 0 0];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    LA
+    {
+        type            fixedValue;
+        value           uniform 0;
+    }
+
+    PV_1
+    {
+      type             uniformFixedValue;
+      uniformValue          csvFile; 
+ 
+      uniformValueCoeffs
+     {
+        nHeaderLine      0;              // number of header lines
+        refColumn        0;              // time column index
+	componentColumns (1);            // data column index
+	separator	 ";";
+        mergeSeparators  0;             // merge multiple separators
+        fileName         "pressure_bc.csv";
+     }
+   }
+
+
+    PV_2
+     {
+      type             uniformFixedValue;
+      uniformValue          csvFile; 
+ 
+      uniformValueCoeffs
+     {
+        nHeaderLine      0;              // number of header lines
+        refColumn        0;              // time column index
+	componentColumns (1);            // data column index
+	separator	 ";";
+        mergeSeparators  0;             // merge multiple separators
+        fileName         "pressure_bc.csv";
+     }
+    }
+
+
+    PV_3
+     {
+      type             uniformFixedValue;
+      uniformValue          csvFile; 
+ 
+      uniformValueCoeffs
+     {
+        nHeaderLine      0;              // number of header lines
+        refColumn        0;              // time column index
+	componentColumns (1);            // data column index
+	separator	 ";";
+        mergeSeparators  0;             // merge multiple separators
+        fileName         "pressure_bc.csv";
+     }
+    }
+
+
+    PV_4
+       {
+      type             uniformFixedValue;
+      uniformValue          csvFile; 
+ 
+      uniformValueCoeffs
+     {
+        nHeaderLine      0;              // number of header lines
+        refColumn        0;              // time column index
+	componentColumns (1);            // data column index
+	separator	 ";";
+        mergeSeparators  0;             // merge multiple separators
+        fileName         "pressure_bc.csv";
+     }
+    }
+
+    MV
+    {
+        type            zeroGradient;
+    }
+}
+
+// ************************************************************************* //

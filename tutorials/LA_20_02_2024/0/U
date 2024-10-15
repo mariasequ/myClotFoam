@@ -1,0 +1,98 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2312                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volVectorField;
+    object      U;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 1 -1 0 0 0 0];
+
+internalField   uniform (1 0 0);
+
+boundaryField
+{
+    LA
+    {
+        type            zeroGradient;
+    }
+
+    PV_1
+    {
+      type             uniformFixedValue;
+      uniformValue 
+ 
+     {
+	type		csvFile;
+        nHeaderLine      0;              // number of header lines
+        refColumn        0;              // time column index
+	componentColumns 3( 1 2 3 );            // data column index
+	separator	 ";";
+        mergeSeparators  no;             // merge multiple separators
+        file         "0/velocity_bc.csv";
+     }
+    }
+
+    PV_2
+    {
+      type             uniformFixedValue;
+      uniformValue 
+ 
+     {
+	type		csvFile;
+        nHeaderLine      0;              // number of header lines
+        refColumn        0;              // time column index
+	componentColumns 3( 1 2 3 );            // data column index
+	separator	 ";";
+        mergeSeparators  no;             // merge multiple separators
+        file         "0/velocity_bc.csv";
+     }
+    }
+
+    PV_3
+    {
+      type             uniformFixedValue;
+      uniformValue 
+ 
+     {
+	type		csvFile;
+        nHeaderLine      0;              // number of header lines
+        refColumn        0;              // time column index
+	componentColumns 3( 1 2 3 );            // data column index
+	separator	 ";";
+        mergeSeparators  no;             // merge multiple separators
+        file         "0/velocity_bc.csv";
+     }
+    }
+
+    PV_4
+    {
+      type             uniformFixedValue;
+      uniformValue 
+ 
+     {
+	type		csvFile;
+        nHeaderLine      0;              // number of header lines
+        refColumn        0;              // time column index
+	componentColumns 3( 1 2 3 );            // data column index
+	separator	 ";";
+        mergeSeparators  no;             // merge multiple separators
+        file         "0/velocity_bc.csv";
+     }
+    }
+    MV
+    {
+        type            zeroGradient;
+    }
+}
+
+
+// ************************************************************************* //

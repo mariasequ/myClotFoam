@@ -449,6 +449,44 @@ fluidPhase.field.set
     )
 );
 
+// S3 (Fibrinogen)
+Info<< "Reading field fluidPhase_S3\n" << endl;
+fluidPhase.field.set
+(
+    1,
+    new volScalarField
+    (   
+        IOobject
+        (   
+            "fluidPhase_S3",
+            runTime.timeName(),
+            mesh,
+            IOobject::MUST_READ,                                      
+            IOobject::AUTO_WRITE
+        ),  
+        mesh
+    )   
+);
+
+// E3 (Fibrin)
+Info<< "Reading field fluidPhase_E3\n" << endl;
+fluidPhase.field.set
+(
+    1,
+    new volScalarField
+    (   
+        IOobject
+        (   
+            "fluidPhase_E3",
+            runTime.timeName(),
+            mesh,
+            IOobject::MUST_READ,                                      
+            IOobject::AUTO_WRITE
+        ),  
+        mesh
+    )   
+);
+
 // Set all necessary fields for RK method = 0 with proper dimensions
 fluidPhase.initializeRKFields();
 

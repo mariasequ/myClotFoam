@@ -86,7 +86,7 @@ sigma_Tf 6; // How far back the integration goes for sigma_release [s]
    Chemical Reaction Parameters
 \*---------------------------------------------------------------------------*/
 num_seBound 2; // Number of SE-bound chem. species (integer)
-num_fluidPhase 4; // Number of fluid-phase chem. species (integer)
+num_fluidPhase 6; // Number of fluid-phase chem. species (integer)
 num_pltBound 6; // Number of platelet-bound chem. species (integer)
 
 t0_chem $t0_Plt; // When the chemicals start to enter the domain
@@ -102,6 +102,7 @@ Dc 5.0e-05; // [mm^2/s]
 E0_IC 1.5e-07; // Concentration of TF:VIIa on SE Wall [nanomol / mm^2]
 S1_IC 1.7e-04; // Concentration of X at inlet [nanomol / mm^3]
 S2_IC 1.4e-03; // Concentration of II at inlet [nanomol / mm^3]
+S3_IC 4411.76; // Concentration of I at inlet [nanomol / mm^3]
 
 // Number of binding sites on platelet surface for specific chems
 N_1 2700.0;
@@ -132,6 +133,7 @@ kS1_off 0.17; // Off-rate for FV [1/s]
 kS2_on 1.0e+04; // On-rate for II [mm^3 / nanomol / s]
 kS2_off 5.9; // Off-rate for II [1/s]
 
+kE3_on 0.006; // On-rate for I [1/s]  
 /* ------------------------------------------------------------------------- *\
    Other lengths used by multiple files (DON'T EDIT!!!!!)
 \*---------------------------------------------------------------------------*/

@@ -139,7 +139,15 @@ struct chemConstants
         "kE2_off",
         dimless/dimTime,
         inputParameters.lookup("kE2_off")
-    }; 
+    };
+
+     // Kinetic Rates for E3
+    dimensionedScalar kE3_on
+    {
+        "kE3_on",
+        dimless/dimTime,
+        inputParameters.lookup("kE3_on")
+    };  
 
     /***********************************************************************
         Constructor

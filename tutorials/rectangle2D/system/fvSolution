@@ -59,7 +59,7 @@ solvers
     };
 
     // Fluid Phase Chemeical Species
-    "(fluidPhase_S1|fluidPhase_S2|fluidPhase_E1|fluidPhase_E2)"
+    "(fluidPhase_S1|fluidPhase_S2|fluidPhase_E1|fluidPhase_E2|fluidPhase_S3|fluidPhase_E3)"
     {
         solver          smoothSolver;
         smoother        symGaussSeidel;

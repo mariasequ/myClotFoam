@@ -53,6 +53,7 @@ class Species_fluidPhase : public Species
             const volScalarField& E1 = input[2];
             const volScalarField& E2 = input[3];
 
+
             // pltBound Reference Vars
             const volScalarField& S1b = pltBound->input[0];
             const volScalarField& S2b = pltBound->input[1];
@@ -84,5 +85,11 @@ class Species_fluidPhase : public Species
             k[3] = - c.kE2_on * (c.N_2 * (Pba + Pbse) / c.N_Avo 
                    - (S2b + E2b + C1 + C2))* E2
                    + c.kE2_off * E2b;
+
+            // S3: fibrnogen 
+            k[4] = - c.kE3_on*E2;
+
+            // E3: fibrin 
+            k[5] = c.kE3_on*E2;
         }
 };
