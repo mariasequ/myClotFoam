@@ -453,7 +453,7 @@ fluidPhase.field.set
 Info<< "Reading field fluidPhase_S3\n" << endl;
 fluidPhase.field.set
 (
-    1,
+    4,
     new volScalarField
     (   
         IOobject
@@ -472,7 +472,7 @@ fluidPhase.field.set
 Info<< "Reading field fluidPhase_E3\n" << endl;
 fluidPhase.field.set
 (
-    1,
+    5,
     new volScalarField
     (   
         IOobject
