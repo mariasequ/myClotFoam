@@ -38,8 +38,8 @@ class Species_fluidPhase : public Species
             fluidPhase[1] = S2,     pltBound[1] -> S2b,     Plt[1] -> Pma,
             fluidPhase[2] = E1,     pltBound[2] -> E1b,     Plt[2] -> Pba,
             fluidPhase[3] = E2,     pltBound[3] -> E2b,     Plt[3] -> Pbse.
-                                    pltBound[4] -> C1,
-                                    pltBound[5] -> C2,
+            fluidPhase[4] = S3,     pltBound[4] -> C1,
+            fluidPhase[5] = E3,     pltBound[5] -> C2,
             
             input refers to the function input from RK4, 
             e.g. input[0] = S1 + h/2 * k1
