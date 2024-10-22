@@ -358,6 +358,8 @@ else
         fluidPhase.field[1] -> S2
         fluidPhase.field[2] -> E1
         fluidPhase.field[3] -> E2
+        fluidPhase.field[4] -> S3
+        fluidPhase.field[5] -> E3
 4) Initialize the PtrList/fields needed for RK solver
 ***************************************************************************/
 
@@ -453,7 +455,7 @@ fluidPhase.field.set
 Info<< "Reading field fluidPhase_S3\n" << endl;
 fluidPhase.field.set
 (
-    1,
+    4,
     new volScalarField
     (   
         IOobject
@@ -472,7 +474,7 @@ fluidPhase.field.set
 Info<< "Reading field fluidPhase_E3\n" << endl;
 fluidPhase.field.set
 (
-    1,
+    5,
     new volScalarField
     (   
         IOobject
